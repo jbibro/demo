@@ -25,5 +25,5 @@ fun appBeans() = beans {
 }
 
 fun routes() = router {
-	GET("/demo") { ok().bodyValue("DEMO9") }
+	GET("/demo") { ok().bodyValue("DEMO10") }
 }
