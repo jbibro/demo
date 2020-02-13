@@ -8,7 +8,7 @@ jobs:
     steps: 
     - uses: actions/checkout@v2
     - name: Jib 
-      run: ./gradlew jibDockerBuild
+      run: ./gradlew build
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -19,6 +19,6 @@ jobs:
     
     - name: Push
       run: |
-        docker save demo:0.0.1-SNAPSHOT | gzip > docker/demo.tar.gz
-        aws deploy push --application-name demo --s3-location s3://demo-123634/demo.zip --ignore-hidden-files --source docker
+        mv build/libs/demo-0.0.1-SNAPSHOT.jar codedeploy/
+        aws deploy push --application-name demo --s3-location s3://demo-123634/demo.zip --ignore-hidden-files --source codedeploy
 
