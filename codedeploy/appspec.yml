@@ -6,5 +6,5 @@ files:
   - source: start.sh
     destination: start.sh
 hooks:
-  AfterInstall:
-    - location: ./start.sh
+  ApplicationStart:
+    - location: java -jar demo-0.0.1-SNAPSHOT.jar
