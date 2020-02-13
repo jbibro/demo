@@ -21,5 +21,5 @@ jobs:
       run: |
         mkdir docker
         docker save demo:0.0.1-SNAPSHOT | gzip > docker/demo.tar.gz
-        aws deploy push --application-name demo --s3-location s3://demo-123634/demo.tar.gz --ignore-hidden-files --source docker
+        aws deploy push --application-name demo --s3-location s3://demo-123634/demo.zip --ignore-hidden-files --source docker
 
