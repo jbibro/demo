@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@v2
-    - name: Jib 
+    - name: Build 
       run: ./gradlew build
 
     - name: Configure AWS Credentials
