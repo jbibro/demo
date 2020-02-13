@@ -1,9 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: demo.tar.gz
-    destination: demo.tar.gz
+  - source: demo-0.0.1-SNAPSHOT.jar
+    destination: demo-0.0.1-SNAPSHOT.jar
+  - source: start.sh
+    destination: start.sh
 hooks:
   ApplicationStart:
-    - location: docker load -i demo.tar.gz
-    - location: docker run demo
+    - location: ./start.sh
