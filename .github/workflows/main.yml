@@ -9,6 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Push Docker Image to AWS ECR
-      run: |
-        ./gradlew jib -Djib.to.auth.username=${{ secrets.AWS_ACCESS_KEY_ID }} -Djib.to.auth.password=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    - name: Build
+      run: ./gradlew build
+    - name: Upload
+      uses: actions/upload-artifact@v1
+      with:
+        name: demo
+        path: build/libs/demo-0.0.1-SNAPSHOT.jar
