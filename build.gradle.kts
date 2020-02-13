@@ -13,9 +13,6 @@ jib {
 	from {
 		image = "adoptopenjdk/openjdk13"
 	}
-	to {
-		image = "462531635785.dkr.ecr.eu-west-1.amazonaws.com/demo"
-	}
 }
 
 group = "com.example"
