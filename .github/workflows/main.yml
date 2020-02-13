@@ -20,8 +20,5 @@ jobs:
     - name: Push
       run: |
         docker save demo:0.0.1-SNAPSHOT | gzip > demo.tar.gz
-        aws deploy push 
-          --application-name demo
-          --s3-location s3://demo-123634/demo.tar.gz
-          --ignore-hidden-files
+        aws deploy push --application-name demo --s3-location s3://demo-123634/demo.tar.gz --ignore-hidden-files
 
