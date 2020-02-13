@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: demo.tar.gz
+    destination: demo.tar.gz
+hooks:
+  ApplicationStart:
+    - location: docker load -i demo.tar.gz
+      timeout: 300
+      runas: root
