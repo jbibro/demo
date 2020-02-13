@@ -6,5 +6,4 @@ files:
 hooks:
   ApplicationStart:
     - location: docker load -i demo.tar.gz
-      timeout: 300
-      runas: root
+    - location: docker run demo
