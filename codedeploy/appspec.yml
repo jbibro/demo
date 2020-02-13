@@ -6,5 +6,5 @@ files:
   - source: start.sh
     destination: start.sh
 hooks:
-  ApplicationStart:
+  AfterInstall:
     - location: ./start.sh
