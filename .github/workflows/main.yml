@@ -9,12 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: eu-west-2
     - name: Push Docker Image to AWS ECR
       run: |
-        ./gradlew jib
+        ./gradlew jib -Djib.to.auth.username=${{ secrets.AWS_ACCESS_KEY_ID }} -Djib.to.auth.password=${{ secrets.AWS_SECRET_ACCESS_KEY }}
