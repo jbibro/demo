@@ -1,2 +1,3 @@
-sudo ln -s demo-0.0.1-SNAPSHOT.jar /etc/init.d/demo
-service demo start
+rm /home/ec2-user/demo-0.0.1-SNAPSHOT.jar
+cp demo-0.0.1-SNAPSHOT.jar /home/ec2-user
+systemctl start demo.service

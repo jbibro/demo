@@ -5,7 +5,10 @@ files:
     destination: .
   - source: start.sh
     destination: .
+  - source: stop.sh
+    destination: .
 hooks:
+  ApplicationStop:
+    - location: stop.sh
   ApplicationStart:
     - location: start.sh
-      runas: ec2-user
