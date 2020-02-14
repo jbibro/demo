@@ -8,9 +8,6 @@ files:
   - source: stop.sh
     destination: .
 hooks:
-  ApplicationStop:
-    - location: stop.sh
-      runas: ec2-user
   ApplicationStart:
     - location: start.sh
       runas: ec2-user
