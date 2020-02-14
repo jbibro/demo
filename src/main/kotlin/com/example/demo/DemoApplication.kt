@@ -11,6 +11,7 @@ import org.springframework.web.reactive.function.server.router
 class DemoApplication
 
 fun main(args: Array<String>) {
+	throw RuntimeException("a")
 	runApplication<DemoApplication>(*args)
 }
 
