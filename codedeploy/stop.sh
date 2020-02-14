@@ -1,1 +1,1 @@
-systemctl stop demo.service
+sudo systemctl stop demo.service
