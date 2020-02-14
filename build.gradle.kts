@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
+
 
 plugins {
 	id("org.springframework.boot") version "2.2.4.RELEASE"
@@ -6,7 +8,10 @@ plugins {
 	id("com.google.cloud.tools.jib") version "2.0.0"
 	kotlin("jvm") version "1.3.61"
 	kotlin("plugin.spring") version "1.3.61"
+}
 
+tasks.getByName<BootJar>("bootJar") {
+	launchScript()
 }
 
 jib {
