@@ -7,5 +7,5 @@ files:
     destination: /home/ec2-user/start.sh
 hooks:
   ApplicationStart:
-    - location: /home/ec2-user/start.sh
+    - location: start.sh
       runas: ec2-user
