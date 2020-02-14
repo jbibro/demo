@@ -20,5 +20,5 @@ jobs:
     - name: Push
       run: |
         mv build/libs/demo-0.0.1-SNAPSHOT.jar codedeploy/
-        aws deploy push --application-name demo --s3-location s3://demo-123634/demo.zip --ignore-hidden-files --source codedeploy
-        aws deploy create-deployment --application-name demo --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name demo-deployment-group --s3-location bucket=demo-123634,bundleType=zip,key=demo.zip
+        aws deploy push --application-name demo --s3-location s3://demo-123634/demo2.zip --ignore-hidden-files --source codedeploy
+        aws deploy create-deployment --application-name demo --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name demo-deployment-group --s3-location bucket=demo-123634,bundleType=zip,key=demo2.zip
