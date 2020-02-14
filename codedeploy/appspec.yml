@@ -5,8 +5,6 @@ files:
     destination: .
   - source: start.sh
     destination: .
-#  - source: stop.sh
-#    destination: .
 hooks:
   ApplicationStart:
     - location: start.sh
