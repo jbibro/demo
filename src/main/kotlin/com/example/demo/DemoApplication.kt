@@ -31,7 +31,7 @@ fun appBeans() = beans {
 fun routes() = router {
 	GET("/demo") { ok().body(
 			Mono.fromCallable { InetAddress.getLocalHost().hostName }
-					.map { "TEST - $it" }
+					.map { "TEST2 - $it" }
 					.subscribeOn(Schedulers.elastic())
 	)
 	}
